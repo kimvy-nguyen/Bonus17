@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Bonus16
+namespace Bonus17
 {
     class FormatException : SystemException
     {
         static void Main(string[] args)
         {
-			
-
 			Console.WriteLine("Welcome to the Grand Circus Motors admin console!");
 
             Cars k = new Cars();
@@ -43,8 +41,7 @@ namespace Bonus16
             Console.WriteLine("Current Inventory:");
             for (int i = 0; i < ncar.Count; i++)
             {
-                int v = i + 1;
-                Cars full = ncar[m];
+                Cars full = ncar[i];
                 Console.WriteLine(full.Make + "\t" + full.Model + "\t" + full.Price.ToString("C2", CultureInfo.CurrentCulture) + "\t" + full.Year);
             }
         }
